@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,700&subset=latin-ext')
+
+c_white =#F2F7F2
+c_accent = #D5A021
+c_dark = #010611
+
+body
+    font-family 'Montserrat', sans-serif
+    margin 0
+    padding 0
+    color c_white
+
+.loader
+    position fixed
+    z-index 100
+    background c_dark
+    color c_accent
+    width 100%
+    height 100%
+    display flex
+    justify-content center
+    align-items center
+    animation loader 3s forwards
+    animation-delay 1s
+    h1
+        font-size 240px
+        animation loader_text 1.4s forwards
+
+@keyframes loader {
+    0% {
+        opacity 1
+    }
+    20% {
+        opacity 1
+    }
+    50% {
+        opacity 0
+    }   
+    100% {
+        top -100%
+    }
+}
+
+@keyframes loader_text {
+    0% {
+        letter-spacing 200px
+    }
+    60% {
+        letter-spacing normal
+        margin-top 0
+    }
+    100% {
+        margin-top -214px
+    }
+}
+
+header
+    background url('../img/bg.jpg') no-repeat center
+    width 100%
+    height 100vh
+    display flex
+    justify-content center
+    align-items center
+    flex-direction column
+    .header_wrapper
+        width 800px
+        text-align center
+        h1
+            margin 0 
+            font-size 240px
+        p
+            line-height 50px
+            font-size 20px
+        a
+            font-size 30px
+            color inherit
+            text-decoration none
+            margin-top 50px
+            display inline-block
+            position relative
+            &:after
+                display block
+                content ''
+                position absolute
+                background c_white
+                width 0
+                height 2px
+                top calc(50% + 2px)
+                left -5px
+                transition width 200ms ease-in-out
+            &:hover
+                &:after
+                    width calc(100% + 10px)
+                    transition width 200ms ease-in-out
+
+
+grid_border-width = 10px
+grid_border-margin = 20px
+
+.grid
+    display flex
+    justify-content center
+    align-items center
+    .grid-item
+        width 33.05vw
+        height 33.05vw
+        display flex
+        justify-content center
+        align-items center 
+        border none
+        box-sizing border-box
+        .img-container
+            height calc(33.05vw)
+            width calc(33.05vw)
+            position relative
+            width 33.05vw
+            height 33.05vw
+            display flex
+            justify-content center
+            align-items center
+            overflow hidden
+            img
+                width 100%
+                height 100%
+                z-index -1
+                transition 200ms ease
+            &:hover img
+                width 104%
+                height 104%
+                filter blur(4px) brightness(0.3) contrast(120%) hue-rotate(180deg)
+                transition 200ms ease
+            .text-container
+                position absolute
+                top 0
+                left 0
+                width 33.05vw
+                height 33.05vw
+                overflow hidden
+                background-image linear-gradient(to right, c_accent, c_accent),
+                    linear-gradient(to right, c_accent, c_accent),
+                    linear-gradient(to right, c_accent, c_accent),
+                    linear-gradient(to right, c_accent, c_accent)
+                background-size 0
+                background-position grid_border-margin grid_border-margin,
+                "calc(100% - %s)" % grid_border-margin grid_border-margin,
+                "calc(100% - %s)" % grid_border-margin "calc(100% - %s)" % grid_border-margin,
+                grid_border-margin "calc(100% - %s)" % grid_border-margin
+                background-repeat no-repeat
+                z-index 10
+                animation grid_border_out 300ms
+                opacity 0
+                display flex
+                justify-content center
+                align-items center
+                flex-direction column
+                &:hover
+                    background-image linear-gradient(to right, c_accent, c_accent),
+                    linear-gradient(to right, c_accent, c_accent),
+                    linear-gradient(to right, c_accent, c_accent),
+                    linear-gradient(to right, c_accent, c_accent)
+                    background-position grid_border-margin grid_border-margin,
+                    "calc(100% - %s)" % grid_border-margin grid_border-margin,
+                    "calc(100% - %s)" % grid_border-margin "calc(100% - %s)" % grid_border-margin,
+                    grid_border-margin "calc(100% - %s)" % grid_border-margin
+                    background-repeat no-repeat
+                    animation grid_border_in 500ms forwards
+                    opacity 1
+                    .wrapper
+                        animation text_container_show 500ms forwards
+                .wrapper
+                    display flex
+                    justify-content center
+                    align-items center
+                    flex-direction column
+                    .grid-item_title
+                        font-size 18px
+                        font-weight 700
+                        text-transform lowercase
+                        color c_white
+                        text-decoration none
+                        transition 100ms ease
+                        text-align center
+                        &:hover
+                            color c_accent
+                            transition 200ms ease
+                    .tags
+                        list-style none
+                        margin 10px 0 0 0 
+                        padding 0
+                        display flex
+                        justify-content center
+                        align-items center
+                        flex-direction row
+                        &_item
+                            margin 0 3px
+                            padding 4px
+                            font-size 12px
+                            border 1px solid c_white
+                            border-radius 4px
+
+
+@keyframes text_container_show {
+    0% {
+        clip-path inset(0 50% 0 50%)
+        }    
+    50% {
+        clip-path inset(0 50% 0 50%)
+        }    
+    100% {
+        clip-path inset(0 0 0 0)
+    }
+}
+
+
+
+@keyframes grid_border_in {
+    0% {
+        background-size 0% grid_border-width,
+                        grid_border-width 0%,
+                        0% grid_border-width,
+                        grid_border-width 0%
+    }
+    100% {
+        background-size "calc(100% - (%s * 2))" % grid_border-margin                          grid_border-width,
+                        grid_border-width "calc(100% - (%s * 2))" % grid_border-margin,
+                        "calc(100% - (%s * 2))" % grid_border-margin grid_border-width,
+                        grid_border-width "calc(100% - (%s * 2))" % grid_border-margin
+    }
+}
+
+
+@keyframes grid_border_out {
+    0% {
+        background-size "calc(100% - (%s * 2))" % grid_border-margin grid_border-width,
+                        grid_border-width "calc(100% - (%s * 2))" % grid_border-margin,
+                        "calc(100% - (%s * 2))" % grid_border-margin grid_border-width,
+                        grid_border-width "calc(100% - (%s * 2))" % grid_border-margin
+    }
+    100% {
+        background-size 0% grid_border-width,
+                        grid_border-width 0%,
+                        0% grid_border-width,
+                        grid_border-width 0%
+    }
+}
