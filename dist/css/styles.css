@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,700&subset=latin-ext");
+*::selection {
+  background: #d5a021;
+}
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
@@ -146,11 +149,11 @@ header .header_wrapper a:hover:after {
   background-image: linear-gradient(to right, #d5a021, #d5a021), linear-gradient(to right, #d5a021, #d5a021), linear-gradient(to right, #d5a021, #d5a021), linear-gradient(to right, #d5a021, #d5a021);
   background-position: 20px 20px, calc(100% - 20px) 20px, calc(100% - 20px) calc(100% - 20px), 20px calc(100% - 20px);
   background-repeat: no-repeat;
-  animation: grid_border_in 500ms forwards;
+  animation: grid_border_in 1s forwards;
   opacity: 1;
 }
 .grid .grid-item .img-container .text-container:hover .wrapper {
-  animation: text_container_show 500ms forwards;
+  animation: text_container_show 1s forwards;
 }
 .grid .grid-item .img-container .text-container .wrapper {
   display: -ms-flexbox;
@@ -194,6 +197,19 @@ header .header_wrapper a:hover:after {
   font-size: 12px;
   border: 1px solid #f2f7f2;
   border-radius: 4px;
+}
+footer {
+  background: #010611;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 40px 0;
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 @keyframes loader {
   0% {

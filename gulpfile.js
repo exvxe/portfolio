@@ -5,15 +5,6 @@ var gulp        	= require('gulp'),
     include 		= require("gulp-include"),
     autoprefixer 	= require('gulp-autoprefixer');
 
-gulp.task('serve', ['styl', 'html', 'js'], function() {
-    browserSync.init({
-        server: "./dist",
-        notify: false
-    });
-    gulp.watch("src/css/*.styl", ['styl']);
-    gulp.watch("src/*.html", ['html']);
-    gulp.watch("src/js/*.js", ['js']);
-});
 
 gulp.task('styl', function() {
     return gulp.src("src/css/styles.styl")
@@ -41,5 +32,14 @@ gulp.task('js', function() {
 })
 
 
+gulp.task('serve', gulp.series(gulp.parallel('styl', 'html', 'js'), function() {
+    browserSync.init({
+        server: "./dist",
+        notify: false
+    });
+    gulp.watch("src/css/*.styl", gulp.series(gulp.parallel('styl')));
+    gulp.watch("src/*.html", gulp.series(gulp.parallel('html')));
+    gulp.watch("src/js/*.js", gulp.series(gulp.parallel('js')));
+}));
 
-gulp.task('default', ['serve']);
+gulp.task('default', gulp.series(gulp.parallel('serve')));

@@ -4,6 +4,9 @@ c_white =#F2F7F2
 c_accent = #D5A021
 c_dark = #010611
 
+*::selection
+    background c_accent
+
 body
     font-family 'Montserrat', sans-serif
     margin 0
@@ -163,10 +166,10 @@ grid_border-margin = 20px
                     "calc(100% - %s)" % grid_border-margin "calc(100% - %s)" % grid_border-margin,
                     grid_border-margin "calc(100% - %s)" % grid_border-margin
                     background-repeat no-repeat
-                    animation grid_border_in 500ms forwards
+                    animation grid_border_in 1s forwards
                     opacity 1
                     .wrapper
-                        animation text_container_show 500ms forwards
+                        animation text_container_show 1s forwards
                 .wrapper
                     display flex
                     justify-content center
@@ -243,3 +246,13 @@ grid_border-margin = 20px
                         grid_border-width 0%
     }
 }
+
+footer
+    background c_dark
+    display flex
+    justify-content center
+    align-items center
+    padding 40px 0
+    font-size 12px
+    font-weight 300
+    text-transform uppercase
