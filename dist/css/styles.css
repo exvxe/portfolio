@@ -76,7 +76,7 @@ header .header_wrapper a:hover:after {
   width: calc(100% + 10px);
   transition: width 200ms ease-in-out;
 }
-.grid {
+#grid {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -84,7 +84,7 @@ header .header_wrapper a:hover:after {
   -ms-flex-align: center;
   align-items: center;
 }
-.grid .grid-item {
+#grid .grid-item {
   width: 33.05vw;
   height: 33.05vw;
   display: -ms-flexbox;
@@ -97,10 +97,10 @@ header .header_wrapper a:hover:after {
   box-sizing: border-box;
   cursor: pointer;
 }
-.grid .grid-item .grid-item_desc {
+#grid .grid-item .grid-item_desc {
   display: none;
 }
-.grid .grid-item .img-container {
+#grid .grid-item .img-container {
   height: calc(33.05vw);
   width: calc(33.05vw);
   position: relative;
@@ -114,19 +114,19 @@ header .header_wrapper a:hover:after {
   align-items: center;
   overflow: hidden;
 }
-.grid .grid-item .img-container img {
+#grid .grid-item .img-container img {
   width: 100%;
   height: 100%;
   z-index: -1;
   transition: 200ms ease;
 }
-.grid .grid-item .img-container:hover img {
+#grid .grid-item .img-container:hover img {
   width: 104%;
   height: 104%;
   filter: blur(4px) brightness(0.3) contrast(120%) hue-rotate(180deg);
   transition: 200ms ease;
 }
-.grid .grid-item .img-container .text-container {
+#grid .grid-item .img-container .text-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -149,7 +149,7 @@ header .header_wrapper a:hover:after {
   -ms-flex-direction: column;
   flex-direction: column;
 }
-.grid .grid-item .img-container .text-container:hover {
+#grid .grid-item .img-container .text-container:hover {
   background-image: linear-gradient(to right, #d5a021, #d5a021), linear-gradient(to right, #d5a021, #d5a021), linear-gradient(to right, #d5a021, #d5a021), linear-gradient(to right, #d5a021, #d5a021);
   background-position: 20px 20px, calc(100% - 20px) 20px, calc(100% - 20px) calc(100% - 20px), 20px calc(100% - 20px);
   background-repeat: no-repeat;
@@ -157,10 +157,10 @@ header .header_wrapper a:hover:after {
   animation-delay: 0.4s;
   opacity: 1;
 }
-.grid .grid-item .img-container .text-container:hover .wrapper {
+#grid .grid-item .img-container .text-container:hover .wrapper {
   animation: text_container_show 1s forwards;
 }
-.grid .grid-item .img-container .text-container .wrapper {
+#grid .grid-item .img-container .text-container .wrapper {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -170,7 +170,7 @@ header .header_wrapper a:hover:after {
   -ms-flex-direction: column;
   flex-direction: column;
 }
-.grid .grid-item .img-container .text-container .wrapper .grid-item_title {
+#grid .grid-item .img-container .text-container .wrapper .grid-item_title {
   font-size: 18px;
   font-weight: 700;
   text-transform: lowercase;
@@ -179,11 +179,11 @@ header .header_wrapper a:hover:after {
   transition: 100ms ease;
   text-align: center;
 }
-.grid .grid-item .img-container .text-container .wrapper .grid-item_title:hover {
+#grid .grid-item .img-container .text-container .wrapper .grid-item_title:hover {
   color: #d5a021;
   transition: 200ms ease;
 }
-.grid .grid-item .img-container .text-container .wrapper .tags {
+#grid .grid-item .img-container .text-container .wrapper .tags {
   list-style: none;
   margin: 10px 0 0 0;
   padding: 0;
@@ -196,7 +196,7 @@ header .header_wrapper a:hover:after {
   -ms-flex-direction: row;
   flex-direction: row;
 }
-.grid .grid-item .img-container .text-container .wrapper .tags_item {
+#grid .grid-item .img-container .text-container .wrapper .tags_item {
   margin: 0 3px;
   padding: 4px;
   font-size: 12px;
@@ -216,7 +216,7 @@ footer {
   font-weight: 300;
   text-transform: uppercase;
 }
-.techs {
+#techs {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -228,12 +228,12 @@ footer {
   color: #010611;
   margin: 80px 0;
 }
-.techs h3 {
+#techs h3 {
   font-weight: 700;
   font-size: 26px;
   margin: 0;
 }
-.techs .tags {
+#techs .tags {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
@@ -246,7 +246,7 @@ footer {
   padding: 0;
   width: 70vw;
 }
-.techs .tags .item {
+#techs .tags .item {
   border: 1px solid #010611;
   margin: 0 4px;
   padding: 4px 6px;
@@ -254,12 +254,12 @@ footer {
   transition: 200ms ease;
   display: inline-block;
 }
-.techs .tags .item.bold {
+#techs .tags .item.bold {
   border-width: 2px;
   border-color: #d5a021;
 }
-.techs .tags .item:hover,
-.techs .tags .item:focus {
+#techs .tags .item:hover,
+#techs .tags .item:focus {
   font-size: 24px;
   border-width: 2px;
   transition: 200ms ease;
