@@ -12,13 +12,10 @@ let arcData = [
                 {label: 'D3.js', value: 4},
                 {label: 'Photoshop', value: 10}
             ],
-    color =             d3.scaleLinear()
-                        .domain([1,100])
-                        .interpolate(d3.interpolateHcl)
-                        .range([d3.rgb("#393E41"), d3.rgb('#FF0707')]),
+    color = [ 'F2806A', '#F17259', 'F06449', 'DB5B43', '#C5D4AF', '#BECFA5', '#B7CA9B', '#B0C592']
     arcGenerator =      d3.arc()
-                        .innerRadius(50)
-                        .outerRadius(100);
+                        .innerRadius(120)
+                        .outerRadius(160);
 
 arcData = d3.pie()
             .value(function(d) { return d.value; })
@@ -47,11 +44,13 @@ d3.select('g')
 
 
 d3.select('g')
+.selectAll('hiddenSkillsArcs')
 .data(arcData)
-.enter().append("text")
-.attr("class", "skillsText")
+.enter()
+.append("text")
+.attr("dy","-5px")
+.attr("dx","8px")
 .append("textPath")
-.attr("startOffset","50%")
-.style("text-anchor","middle")
-.attr("xlink:href",function(d,i){return "#skillsArc"+i;})
+.attr("class", "skillsText")
+.attr("xlink:href",function(d,i){return "#skillsArcSlice_"+i;})
 .text(function(d){return d.data.label;});
