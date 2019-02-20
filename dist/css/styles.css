@@ -1,18 +1,19 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,700&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900");
 *::selection {
-  background: #eedc00;
+  background: #41ead4;
 }
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
-  color: #f7fff7;
+  color: #1b1f27;
+  background: #f8f7ff;
 }
 .loader {
   position: fixed;
   z-index: 100;
-  background: #001489;
-  color: #eedc00;
+  color: #1b1f27;
+  background: #fbff12;
   width: 100%;
   height: 100%;
   display: -ms-flexbox;
@@ -21,17 +22,17 @@ body {
   justify-content: center;
   -ms-flex-align: center;
   align-items: center;
-  animation: loader 3s forwards;
+  animation: loader 1s forwards;
   animation-delay: 1s;
   text-transform: uppercase;
 }
 .loader h1 {
   font-size: 240px;
-  animation: loader_text 1.4s forwards;
+  animation: loader_text 600ms forwards;
 }
 header {
-  background-color: #001489;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23eedc00' fill-opacity='0.2'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-color: #f8f7ff;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%231b1f27' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
   width: 100%;
   height: 100vh;
   display: -ms-flexbox;
@@ -42,7 +43,7 @@ header {
   align-items: center;
   -ms-flex-direction: column;
   flex-direction: column;
-  color: #eedc00;
+  color: #1b1f27;
 }
 header .header_wrapper {
   width: 800px;
@@ -50,21 +51,18 @@ header .header_wrapper {
 }
 header .header_wrapper h1 {
   margin: 0;
-  font-size: 240px;
-  text-transform: uppercase;
-}
-header .header_wrapper h2 {
-  margin: 0;
   font-size: 80px;
+  text-transform: uppercase;
+  font-weight: 900;
 }
-header text-transform uppercase {
-  color: #eedc00;
+header .header_wrapper h1:nth-of-type(1) {
+  margin-bottom: 40px;
 }
-header p {
+header .header_wrapper p {
   line-height: 50px;
   font-size: 20px;
 }
-header a {
+header .header_wrapper a {
   font-size: 30px;
   color: inherit;
   text-decoration: none;
@@ -72,18 +70,18 @@ header a {
   display: inline-block;
   position: relative;
 }
-header a:after {
+header .header_wrapper a:after {
   display: block;
   content: '';
   position: absolute;
-  background: #f7fff7;
+  background: #41ead4;
   width: 0;
   height: 2px;
   top: calc(50% + 2px);
   left: -5px;
   transition: width 200ms ease-in-out;
 }
-header a:hover:after {
+header .header_wrapper a:hover:after {
   width: calc(100% + 10px);
   transition: width 200ms ease-in-out;
 }
@@ -144,7 +142,7 @@ header a:hover:after {
   width: 33.05vw;
   height: 33.05vw;
   overflow: hidden;
-  background-image: linear-gradient(to right, #eedc00, #eedc00), linear-gradient(to right, #eedc00, #eedc00), linear-gradient(to right, #eedc00, #eedc00), linear-gradient(to right, #eedc00, #eedc00);
+  background-image: linear-gradient(to right, #fbff12, #fbff12), linear-gradient(to right, #fbff12, #fbff12), linear-gradient(to right, #fbff12, #fbff12), linear-gradient(to right, #fbff12, #fbff12);
   background-size: 0;
   background-position: 20px 20px, calc(100% - 20px) 20px, calc(100% - 20px) calc(100% - 20px), 20px calc(100% - 20px);
   background-repeat: no-repeat;
@@ -161,7 +159,7 @@ header a:hover:after {
   flex-direction: column;
 }
 #grid .grid-item .img-container .text-container:hover {
-  background-image: linear-gradient(to right, #eedc00, #eedc00), linear-gradient(to right, #eedc00, #eedc00), linear-gradient(to right, #eedc00, #eedc00), linear-gradient(to right, #eedc00, #eedc00);
+  background-image: linear-gradient(to right, #fbff12, #fbff12), linear-gradient(to right, #fbff12, #fbff12), linear-gradient(to right, #fbff12, #fbff12), linear-gradient(to right, #fbff12, #fbff12);
   background-position: 20px 20px, calc(100% - 20px) 20px, calc(100% - 20px) calc(100% - 20px), 20px calc(100% - 20px);
   background-repeat: no-repeat;
   animation: grid_border_in 1s forwards;
@@ -185,13 +183,13 @@ header a:hover:after {
   font-size: 18px;
   font-weight: 700;
   text-transform: lowercase;
-  color: #f7fff7;
+  color: #f8f7ff;
   text-decoration: none;
   transition: 100ms ease;
   text-align: center;
 }
 #grid .grid-item .img-container .text-container .wrapper .grid-item_title:hover {
-  color: #eedc00;
+  color: #41ead4;
   transition: 200ms ease;
 }
 #grid .grid-item .img-container .text-container .wrapper .tags {
@@ -211,11 +209,11 @@ header a:hover:after {
   margin: 0 3px;
   padding: 4px;
   font-size: 12px;
-  border: 1px solid #f7fff7;
+  border: 1px solid #f8f7ff;
   border-radius: 4px;
 }
 footer {
-  background: #001489;
+  background: #fbff12;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -236,12 +234,13 @@ footer {
   align-items: center;
   -ms-flex-direction: row;
   flex-direction: row;
-  color: #001489;
-  margin: 80px 0;
+  color: #1b1f27;
+  margin: 30px;
+  padding: 20px;
 }
 #techs div {
   width: 50%;
-  padding: 0 40px;
+  padding: 0 40px 0 120px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -252,6 +251,8 @@ footer {
 #techs div p {
   font-size: 20px;
   line-height: 200%;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 @keyframes loader {
   0% {
@@ -260,23 +261,17 @@ footer {
   20% {
     opacity: 1;
   }
-  50% {
-    opacity: 0;
-  }
   100% {
-    top: -100%;
+    opacity: 0;
+    z-index: -10;
   }
 }
 @keyframes loader_text {
   0% {
     letter-spacing: 200px;
   }
-  60% {
-    letter-spacing: normal;
-    margin-top: 0;
-  }
   100% {
-    margin-top: -214px;
+    letter-spacing: normal;
   }
 }
 @keyframes text_container_show {

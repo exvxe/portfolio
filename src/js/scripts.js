@@ -17,7 +17,7 @@ let arcData = [
                 {label: 'Bootstrap', value: 6},
                 {label: 'Photoshop', value: 10}
             ],
-    color = [ '#D5A021', '#2F333C', '#181C26', '#010611', '#010610', '#C5D4AF', '#BECFA5', '#B7CA9B', '#B0C592']
+    color = [ '#FBFF12', '#41EAD4', '#1b1f27',  '#FBFF12', '#41EAD4', '#1b1f27',  '#FBFF12', '#41EAD4', '#1b1f27',  '#FBFF12', '#41EAD4', '#1b1f27',  '#FBFF12', '#41EAD4', '#1b1f27']
     arcGenerator =      d3.arc()
                         .innerRadius(120)
                         .outerRadius(200);
