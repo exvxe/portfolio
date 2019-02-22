@@ -138,6 +138,25 @@ footer {
   font-weight: 700;
   letter-spacing: 0.02em;
 }
+#techs .icons {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+#techs .icons .icon {
+  -ms-flex: 1 0 21%;
+  flex: 1 0 21%;
+  width: 128px;
+  height: 128px;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 14px;
+}
 @keyframes loader {
   0% {
     top: 0;
