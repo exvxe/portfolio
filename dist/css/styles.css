@@ -195,6 +195,12 @@ footer {
   box-sizing: border-box;
   margin: 14px;
 }
+.contact {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
 @keyframes loader {
   0% {
     top: 0;
