@@ -14,9 +14,14 @@ let splitter = () => {
     
     document.querySelector('.word:nth-of-type(1)').outerHTML += "<br>"
     
-    let headerLastWord = document.querySelector('.word:nth-last-of-type(1)')
-    
-    headerLastWord.innerHTML = "<a href='#techs'>" + headerLastWord.innerText + "</a>"
 }
 
 splitter()
+
+let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+window.addEventListener('resize', () => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
